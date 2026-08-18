@@ -1,0 +1,90 @@
+/* Import Inter font for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Import Tailwind */
+@import "tailwindcss";
+
+/* Tailwind v4 Theme Configuration */
+@theme {
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: "Times New Roman", Times, serif;
+
+    --color-brand-green: #008000;
+    --color-brand-darkgreen: #005a00;
+    --color-brand-light: #F0FFF0;
+    --color-brand-accent: #22c55e;
+
+    --tracking-wide: 1.2px;
+    --width-custom: 1200px;
+
+    --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 20px 40px -10px rgba(0, 128, 0, 0.15);
+}
+
+/* Base Styles */
+@layer base {
+    body {
+        font-family: var(--font-sans);
+    }
+
+    .font-serif-title {
+        font-family: var(--font-serif);
+    }
+}
+
+/* Custom Utilities & Components */
+.gallery-grid {
+    column-count: 2;
+    column-gap: 16px;
+}
+
+@media (min-width: 640px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-brand-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-darkgreen);
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "shambhuplayingarena",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./input.css -o ./output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inydv/Shambhu-Playing-Arena.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/inydv/Shambhu-Playing-Arena/issues"
+  },
+  "homepage": "https://github.com/inydv/Shambhu-Playing-Arena#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
